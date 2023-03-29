@@ -1,0 +1,29 @@
+{
+  "name": "simple-npx",
+  "version": "0.0.1",
+  "description": "a simple npx cli",
+  "main": "index.js",
+  "bin": {
+    "simple-npx": "dist/index.js"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "build": "tsc",
+    "postbuild": "copyfiles -u 1 src/templates/**/* dist/",
+    "test": "echo 'Error: no test specified' && exit 1"
+  },
+  "keywords": [],
+  "author": "eric@fullstackeric.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.1",
+    "@types/node": "^18.15.11",
+    "copyfiles": "^2.4.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "enquirer": "^2.3.6",
+    "fs-extra": "^11.1.1"
+  }
+}
